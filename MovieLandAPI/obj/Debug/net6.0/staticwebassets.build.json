@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LJ1E+sXhHSr/ZOlDqr2Fc4Ob8J8X/2V/CH/FhMf6rO4=",
+  "Hash": "L9fO8r460J+Ae7mN7rndJ92M1kiW+u2YCcn4+b3r0lU=",
   "Source": "MovieLandAPI",
   "BasePath": "_content/MovieLandAPI",
   "Mode": "Default",
@@ -16,6 +16,23 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\orlah\\source\\repos\\MovieLandAPI\\MovieLandAPI\\wwwroot\\actors\\e2787771-73ed-42c1-8829-65b41a63e05f.jpg",
+      "SourceId": "MovieLandAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\orlah\\source\\repos\\MovieLandAPI\\MovieLandAPI\\wwwroot\\",
+      "BasePath": "_content/MovieLandAPI",
+      "RelativePath": "actors/e2787771-73ed-42c1-8829-65b41a63e05f.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\actors\\e2787771-73ed-42c1-8829-65b41a63e05f.jpg"
+    },
     {
       "Identity": "C:\\Users\\orlah\\source\\repos\\MovieLandAPI\\MovieLandAPI\\wwwroot\\actors\\f4ffb363-3a8e-44ab-94d0-ad256534a59a.jpg",
       "SourceId": "MovieLandAPI",

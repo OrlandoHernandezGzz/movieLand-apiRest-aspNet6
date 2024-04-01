@@ -16,6 +16,7 @@ namespace MovieLandAPI.Helpers
             CreateMap<Actor, ActorDTO>().ReverseMap();
             CreateMap<CreationActorDTO, Actor>()
                 .ForMember(dest => dest.Photo, options => options.Ignore());
+            CreateMap<ActorPatchDTO, Actor>().ReverseMap();
         }
     }
 }

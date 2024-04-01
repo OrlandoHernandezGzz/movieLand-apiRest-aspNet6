@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MovieLandAPI.DTOs;
@@ -87,6 +88,30 @@ namespace MovieLandAPI.Controllers
             }
 
             await context.SaveChangesAsync();
+            return NoContent();
+        }
+
+        [HttpPatch("{id:int}")]
+        public async Task<ActionResult> Patch(int id, [FromBody] JsonPatchDocument<ActorPatchDTO> patchDocument)
+        {
+            if (patchDocument == null) return BadRequest();
+
+            var actorDB = await context.Actors.FirstOrDefaultAsync(x => x.Id == id);
+
+            if (actorDB == null) return NotFound();
+
+            var actorDTO = mapper.Map<ActorPatchDTO>(actorDB);
+
+            patchDocument.ApplyTo(actorDTO, ModelState);
+
+            var isValid = TryValidateModel(actorDTO);
+
+            if (!isValid) return BadRequest(ModelState);
+
+            mapper.Map(actorDTO, actorDB);
+
+            await context.SaveChangesAsync();
+
             return NoContent();
         }
 

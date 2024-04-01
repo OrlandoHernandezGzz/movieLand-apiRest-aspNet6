@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\orlah\\source\\repos\\MovieLandAPI\\MovieLandAPI\\wwwroot\\actors\\e2787771-73ed-42c1-8829-65b41a63e05f.jpg",
+      "PackagePath": "staticwebassets\\actors\\e2787771-73ed-42c1-8829-65b41a63e05f.jpg"
+    },
+    {
       "Id": "C:\\Users\\orlah\\source\\repos\\MovieLandAPI\\MovieLandAPI\\wwwroot\\actors\\f4ffb363-3a8e-44ab-94d0-ad256534a59a.jpg",
       "PackagePath": "staticwebassets\\actors\\f4ffb363-3a8e-44ab-94d0-ad256534a59a.jpg"
     },
