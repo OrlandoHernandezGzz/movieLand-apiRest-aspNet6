@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using MovieLandAPI.Models;
+using MovieLandAPI.Services;
 
 
 // Services
@@ -13,7 +14,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 );
 
 builder.Services.AddAutoMapper(typeof(Program));
-
+builder.Services.AddTransient<IFileStorage, LocalFileStore>();
+builder.Services.AddHttpContextAccessor();
 
 
 // Middlewares.
@@ -21,6 +23,8 @@ builder.Services.AddAutoMapper(typeof(Program));
 var app = builder.Build();
 
 app.UseHttpsRedirection();
+
+app.UseStaticFiles();
 
 app.UseAuthorization();
 

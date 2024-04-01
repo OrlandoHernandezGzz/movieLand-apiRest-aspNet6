@@ -62,3 +62,4 @@ C:\Users\orlah\source\repos\MovieLandAPI\MovieLandAPI\bin\Debug\net6.0\runtimes\
 C:\Users\orlah\source\repos\MovieLandAPI\MovieLandAPI\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\orlah\source\repos\MovieLandAPI\MovieLandAPI\obj\Debug\net6.0\MovieLandAPI.csproj.CopyComplete
 C:\Users\orlah\source\repos\MovieLandAPI\MovieLandAPI\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\orlah\source\repos\MovieLandAPI\MovieLandAPI\bin\Debug\net6.0\MovieLandAPI.staticwebassets.runtime.json

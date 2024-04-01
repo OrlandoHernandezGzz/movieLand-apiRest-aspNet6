@@ -11,6 +11,11 @@ namespace MovieLandAPI.Helpers
             // Genders
             CreateMap<Gender, GenderDTO>().ReverseMap();
             CreateMap<CreationGenderDTO, Gender>();
+
+            // Actors
+            CreateMap<Actor, ActorDTO>().ReverseMap();
+            CreateMap<CreationActorDTO, Actor>()
+                .ForMember(dest => dest.Photo, options => options.Ignore());
         }
     }
 }
