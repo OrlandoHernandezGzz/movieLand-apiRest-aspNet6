@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MovieLandAPI.DTOs;
+using MovieLandAPI.Helpers;
 using MovieLandAPI.Models;
 using MovieLandAPI.Services;
 
@@ -28,9 +29,12 @@ namespace MovieLandAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<ActorDTO>>> Get()
+        public async Task<ActionResult<List<ActorDTO>>> Get([FromQuery] PaginationDTO paginationDTO)
         {
-            var actors = await context.Actors.ToListAsync();
+            var queryable = context.Actors.AsQueryable();
+            await HttpContext.InsertParametersPagination(queryable, paginationDTO.NumberOfRecordsPerPage);
+
+            var actors = await queryable.Page(paginationDTO).ToListAsync();
             return mapper.Map<List<ActorDTO>>(actors);
         }
 
